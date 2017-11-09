@@ -1,0 +1,21 @@
+<% require 'pry' %>
+<h1>Hola</h1>
+<% num1 = "Soy Par!"
+   num2 = "Soy Impar"%>
+   <%   array =[]
+   		50.times do |i|
+   			array<<i+1
+   		end
+   		%>
+   <% 50.times do |i| %>
+    <h3><%= if i%2 ==0
+    		"#{i} #{num1}"
+    	else
+    		"#{i} #{num2}"
+    	end
+    		   %> </h3>
+  <% end %>
+
+
+
+
