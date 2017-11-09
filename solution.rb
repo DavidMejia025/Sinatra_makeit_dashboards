@@ -1,12 +1,7 @@
 require 'sinatra'
 require 'pry'
 
-get '/' do	 
-  	erb :formulario
- end 
-
- post '/page2' do
- 	@name = params[:name]
-	erb :page2 	
- end
+get '/makers/:name' do
+  	"<h1>Hola #{params[:name].capitalize}!</h1>"
+end
 #----
