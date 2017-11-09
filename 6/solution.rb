@@ -12,11 +12,10 @@ require 'sinatra'
 require 'pry'
 
 get '/' do
-erb :mijito
+	if params[:value]
+		@value = params[:value].to_i+1
+	else
+		@value 
+	end
+	erb :contador
 end 
-
-post '/abuelita' do	
-	@mensaje = params[:mensaje]
-	binding.pry
-	erb :abuelita
-end

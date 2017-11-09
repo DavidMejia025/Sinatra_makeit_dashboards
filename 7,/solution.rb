@@ -17,6 +17,5 @@ end
 
 post '/abuelita' do	
 	@mensaje = params[:mensaje]
-	binding.pry
 	erb :abuelita
 end
