@@ -9,11 +9,12 @@
 
 
 require 'sinatra'
+
 get '/' do
-	if params[:value]
-		@value = params[:value].to_i+1
-	else
-		@value = 0
-	end
-	erb :contador
+erb :mijito
 end 
+
+post '/abuelita' do	
+	@mensaje = params[:mensaje]
+	erb :abuelita
+end
