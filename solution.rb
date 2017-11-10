@@ -1,18 +1,16 @@
 # pseudo codigo.
 # 1.recibir el request con un metodo get proveniente de la direccion '/'
-# 2.ir al archivo de views para generar la solucion.
-# 3. en el archivo de views definir los strings de soy par y soy impar.
-# 4. hacer un ciclo que imprima los numeros del 1 al 50
-# 	en este ciclo evaluar si el numero es partition 
-# 		imprimir soy par.
-# 	sino 
-# 		imprimir soy impar.
-# 	end
-# 	y seguir con el 4.
+# 2. presentar la pagina con el valor del contador y el boton
+# 3. cuando se le de click al boton ir a la misma pagina
+# 4. en el metodo get recibir el valor en params
+# 5. aumentar la cuenta en el archivo de views 
+# 6. subir la pagina con el nuevo valor del contador.
+# 	
 
 
 require 'sinatra'
 
-get '/' do	 
-  	erb :numbers
-end 
+get '/' do	
+	@path = request.env["HTTP_USER_AGENT"]
+	erb :path
+end
