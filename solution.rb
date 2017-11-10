@@ -9,12 +9,12 @@
 
 
 require 'sinatra'
-
+require 'pry'
 get '/' do
 	if params[:value]
 		@value = params[:value].to_i+1
 	else
-		@value 
+		@value = 0
 	end
 	erb :contador
 end 
