@@ -35,6 +35,20 @@ end
 def owner
 	Owner.find(self.owner_id) ---------> belongs to
 end
-5.
 
-6.
+5. Create controller
+
+
+
+6. Index taking all index
+	erb: "index.erb"
+
+7. create show 
+   Read one
+
+8. Nest the roots of the dogs in order to belong to the dog
+
+for example
+ /owner/ owneri id / dogs/ new
+
+ This
