@@ -1,0 +1,19 @@
+<h1> Congratulations you buy a new car:</h1>
+<h1> Owner id is  <%= @owner_id %></h1>
+
+<form action="/cars" method="post">
+	<input type="text" name="brand" placeholder="Car Brand">
+	<input type="text" name="model" placeholder="Car model">
+	<input type="text" name="img_url" placeholder="Image Url"> 
+	<input type="hidden" name="owner_id" value="<%= @owner_id%>">
+	<input type="submit" value="Buy now!">
+</form>
+
+<% if @errors %>
+		<ul>
+			<% @errors.each do |error| %>
+				<li> <%= error %> </li>
+			<% end %>
+		</ul>
+	<% end %>	
+<a href="/cars"> Return</a>

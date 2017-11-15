@@ -1,0 +1,29 @@
+<h1>This is <%= @owner.First_name %> <%= @owner.Last_name %></h1>
+
+<img src="<%= @owner.img_url%>" alt="Pilot Photo">
+
+<h2> Cars owned:</h2>
+
+<ul>
+	<% @owner.cars.each do |car| %>
+		<li> <h3><%= car.brand%> <%= car.model%></h3> 
+			<img src="<%= car.img_url%>"> </li>
+	<% end %>
+	
+</ul>
+
+<h3>
+<a href="/owners/edit/<%= @owner.id%>"> Edit Pilot</a>
+</h3>
+
+<h3>
+<a href="/owners/delete/<%= @owner.id%>"> Delete Pilot</a>
+</h3>
+
+<h3>
+<a href="/cars/new?owner_id=<%= @owner.id%>"> Buy a new car!</a>
+</h3>
+
+<h3>
+<a href="/owners/index"> Return</a>
+</ h3>

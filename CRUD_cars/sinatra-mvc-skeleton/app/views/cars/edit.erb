@@ -1,0 +1,21 @@
+<h1> Change the photo of your car</h1>
+
+<form action="/cars/<%=@car.id%>" method="post">
+	<input type="hidden" name="_method" value="PATCH">
+	<input type="text" name="brand" value="<%=@car.brand%>">
+	<input type="text" name="model" value="<%=@car.model%>">
+	<input type="text" name="img_url" value="<%=@car.img_url%>"> 
+
+	<input type="submit" value="Change now!">
+	
+</form>
+
+<% if @errors %>
+		<ul>
+			<% @errors.each do |error| %>
+				<li> <%= error %> </li>
+			<% end %>
+		</ul>
+	<% end %>	
+
+<a href="/cars"> Return</a>

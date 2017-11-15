@@ -1,0 +1,11 @@
+<h1>These are all the dogs waiting for you:</h1>
+
+<h1> Say Hi!</h1>
+
+<ul>
+  <% @dogs.each do |dog| %>
+    <li><a href="/dogs/<%= dog.id %>"><%= dog.name %> --->Picture </a></li>
+  <% end %>
+</ul> 
+
+<a href="/dogs/new">Send us one dog!</a>

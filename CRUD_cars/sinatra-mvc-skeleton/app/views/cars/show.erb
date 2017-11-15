@@ -1,0 +1,25 @@
+<h1>This is the <%= @car.brand %></h1>
+
+<h2>Model  <%= @car.model %></h2>
+
+<% if @car.owner %>
+	<h2> This car belongs to : <%= @car.owner.First_name%> <%=@car.owner.Last_name %></h2>
+		<a href="/owners/<%=@car.owner.id%>"> Go to pilot. </a>
+		<% else %>
+		<h2> This car is available %></h2>
+<% end %>
+
+<img src="<%= @car.img_url%>" width= 400> <br>
+
+<h2>
+<a href="/cars/<%=@car.id%>/edit">Edit your car here</a>
+</h2> <br>
+
+<h3>
+<a href="/cars"> Return</a>
+</h3>
+
+<form action="/cars/<%= @car.id %>" method="POST">
+	<input type="hidden" name="_method" value="DELETE">
+	<input type="submit" value="Delete">
+</form>

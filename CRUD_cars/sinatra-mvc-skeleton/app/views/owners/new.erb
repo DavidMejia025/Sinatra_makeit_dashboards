@@ -1,0 +1,19 @@
+<h1>Hi new pilot, please complete the following information:</h1>
+
+<form action="/owners" method="POST">
+	<label for="First name"> First name:</label><br>
+	<input type="text" name="First_name"><br>
+	<label for="Last name"> Last name:</label><br>
+	<input type="text" name="Last_name">
+	<label for="Img url"> Photo:</label><br>
+	<input type="text" name="img_url">
+	<input type="submit" value="Create">
+</form>
+
+<ul>
+<% if @errors %>
+	<% @errors.each do |error| %>
+		<li> Sorry, <%= error %>
+	<% end %>
+<% end %>
+</ul>

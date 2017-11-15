@@ -1,0 +1,17 @@
+<h1> read the following article:</h1>
+
+
+<h3> <%= @note.title %> </h3>
+
+<p> <%=@note.content %> </p>
+
+<h3> The grade of the work is:</h3>
+<p> box for the grade ___ <%= @note.grade%> </p>
+
+
+<h4> <a href="/notes/<%= @note.id%>/edit">Update article</a> </h4>
+<h4> <a href="/notes/<%= @note.id%>/delete">Delete document</a> </h4>
+
+<a href="/notes">Return</a>
+
+

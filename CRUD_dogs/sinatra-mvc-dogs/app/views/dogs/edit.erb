@@ -1,0 +1,11 @@
+<h1> Edit your dog</h1>
+<h1> Edit your dogPicture Dog:</h1>
+
+<form action="/dogs/<%= @dog.id %>" method="post">
+	<input type="hidden" name="_method" value="put">
+	<label for="name">Name</label>
+	<input type="text" name="dog[:name]" value="<%= @dog.name %> ">
+	<label for="age"> Age</label>
+	<input type="text" name="dog[:age]" value="<%= @dog.age %>"> 
+	<input type="submit" value="Apply changes">
+</form>

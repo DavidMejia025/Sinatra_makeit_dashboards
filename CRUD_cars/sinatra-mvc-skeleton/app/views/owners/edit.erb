@@ -1,0 +1,18 @@
+<h1>Do you want to edit some information about the pilot <%= @owner.First_name %><%= @owner.Last_name %></h1>
+
+<form action="/owners/<%= @owner.id %>" method="post">
+	<input type="hidden" name="_method" value="PATCH">
+	<input type="text" name="First_name" value="<%= @owner.First_name %>"><br>
+	<input type="text" name="Last_name" value="<%= @owner.Last_name %>"><br>
+	<input type="text" name="img_url" value="<%= @owner.img_url %>"><br>
+	
+	<input type="submit" value="Apply changes">
+</form>
+
+<ul>
+<% if @errors %>
+	<% @errors.each do |error| %>
+		<li> Try again, <%= error %>
+	<% end %>
+<% end %>
+</ul>

@@ -1,0 +1,17 @@
+
+<div class="container">	
+	<div class="jumbotron" style="color: blue">
+		<h2> Here you can find all  the Pilots </h2>
+	</div>
+
+	<ul>
+	<% @owners.each do |owner| %>
+		<li> <a href="/owners/<%=owner.id%>"><%=owner.First_name%>_<%=owner.Last_name%></a> </li>
+	<% end %>
+	</ul>
+
+	<h3> <a href="/owners/new"> Add one more pilot </a> </h3>
+
+
+	
+</div>

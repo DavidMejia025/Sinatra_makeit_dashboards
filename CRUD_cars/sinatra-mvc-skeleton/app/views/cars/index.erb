@@ -1,0 +1,16 @@
+
+<div class="container">	
+	<div class="jumbotron" style="color: red">
+		<h2> Here you can find all  the cars in stock </h2>
+		<p>This is my second CRUD!!!</p>
+	</div>
+
+	<ul>
+	<% @cars.each do |car| %>
+		<li> <a href="/cars/<%= car.id%>"><%=car.brand%></a> </li>
+	<% end %>
+	</ul>
+
+
+	<a href="/cars/new"> Recive a new car!</a>
+</div>

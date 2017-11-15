@@ -1,0 +1,15 @@
+<h1>These are the following notes of the current Sinatra 1.0 course: </h1>
+
+<h3> <a href="/notes/create">Create new calification</a>  </h3>
+ <ul>
+	<%  @notes.each do |note| %>
+	  <li> 
+	  	<%=  note.title %>
+	  	<a href="/notes/<%= note.id %>"> Go to this note</a> 
+	  </li>
+	<% end %>
+	
+</ul> 
+
+
+

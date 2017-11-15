@@ -1,0 +1,40 @@
+How to create a new crud for the dogs crud
+
+# rake-T shows the list of tasks. #
+
+#Class method Dog.destroy_all #
+
+# var.sample Returns 
+
+1. create a table througth one new migration
+
+create table nameoftable do |t|
+	columns
+end
+
+2. Create model
+
+3. Migration  Add column owner I to dogs.
+
+4. seeds Dogs and Owners
+
+10.times do
+	Owner.create(arguments)
+
+	2.times do
+	owner.dogs.create!(Dog arguments without owner id, it is inferred from model thanks to active records)
+end
+
+
+Assosiation
+
+def dogs 
+	Dog.where(:owner_id) ----------> Has many
+end
+
+def owner
+	Owner.find(self.owner_id) ---------> belongs to
+end
+5.
+
+6.

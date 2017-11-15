@@ -1,0 +1,13 @@
+<h1> Article <%= @note.title %> : </h1>
+
+<form action="/notes/<%= @note.id %>" method="post">
+	<input type="hidden" name="_method" value="put">
+	<label for="title"> title</label><br>
+	<input type="text" name="note[title]" value="<%= @note.title %>"><br>
+	<label for="title"> content</label><br>
+	<input type="text" name="note[content]" value="<%= @note.content %>"><br>
+	<label for="title"> grade</label><br>
+	<input type="text" name="note[grade]" value="<%= @note.grade %>"><br>
+
+	<input type="submit" value="Modify">
+</form>

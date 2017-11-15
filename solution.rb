@@ -11,6 +11,8 @@
 require 'sinatra'
 
 get '/' do	
-	@path = request.env["HTTP_USER_AGENT"]
-	erb :path
+	puts params
+	# @path = request.env["HTTP_USER_AGENT"]
+	# erb :path
 end
+curl -XGET -H "permiso: soy-un-token-secreto" http://localhost:9393/
