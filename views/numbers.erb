@@ -1,15 +1,16 @@
-<% require 'pry' %>
+
 <h1>Hola</h1>
 <% num1 = "Soy Par!"
    num2 = "Soy Impar!"%>
-   <% 50.times do |i| %>
-    <h3><%= if (i+1)%2 ==0
-    		"#{i+1} #{num1}"
-    	else
-    		"#{i+1} #{num2}"
-    	end
-    		   %> </h3>
-  <% end %>
+   <% 50.times do |v| %>
+  <% if v % 2 == 0 %>
+    <%= "#{v} Soy Par!" %><br>
+  <%else%>
+    <%= "#{v} Soy Impar!" %><br>
+  <%end%>
+<%end%>
+
+  
 
 
 

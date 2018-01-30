@@ -15,5 +15,5 @@ require 'sinatra'
 
 
 get '/' do	 
-  	erb :numbers
+	erb :numbers
 end 
